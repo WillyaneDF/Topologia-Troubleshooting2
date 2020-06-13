@@ -1,0 +1,31 @@
+enable
+conf t
+hostname SW-CORE
+vlan 10
+name CONT
+vlan 30
+name DIR
+interface g0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,30,99
+interface g1/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,30,99
+interface g2/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,30,99
+interface g3/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,30,99
+do wr 
+
+
+
+
+
+
+

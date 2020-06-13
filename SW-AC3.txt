@@ -1,0 +1,20 @@
+SW-AC1
+
+enable
+conf t
+hostname SW-AC3
+vlan 10
+name CONT
+vlan 40
+name DIR
+interface range f0/1
+switchport mode access
+switchport access vlan 10
+interface f0/20
+switchport mode access
+switchport access vlan 30
+interface g0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,30,99
+do wr 
